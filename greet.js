@@ -1,3 +1,3 @@
 export default function greet(name){
-    return "Hello, " + name + " - from ES module"
+    return "Hello, " + name 
 };

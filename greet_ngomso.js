@@ -1,7 +1,19 @@
 import chalk from "chalk"
 
+import figlet from "figlet"
+
 import greet from "./greet.js"
 
-const styledMessage = chalk.bgBlue.white(greet('Ngomso'))
-console.log(styledMessage)
 
+
+figlet(greet("Ngomso"), function (err, data) {
+  if (err) {
+    // console.log(styledMessage + "-----------")
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  const styledMessage = chalk.bgBlue.white(data)
+    console.log(styledMessage);
+  });
+  
